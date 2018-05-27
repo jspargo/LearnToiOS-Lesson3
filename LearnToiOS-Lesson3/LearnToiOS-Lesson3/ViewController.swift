@@ -11,18 +11,19 @@ import UIKit
 class ViewController: UITableViewController {
 
     var holidays = [
-        Holiday(title: "Paris", country: "France", currency: "EUR", emoji: "🥖"),
-        Holiday(title: "Madrid", country: "Spain", currency: "EUR", emoji: "⚽️"),
-        Holiday(title: "New York", country: "USA", currency: "USD", emoji: "🗽"),
-        Holiday(title: "Los Angeles", country: "USA", currency: "USD", emoji: "🎥"),
-        Holiday(title: "Moscow", country: "Russia", currency: "RUB", emoji: "🐻"),
-        Holiday(title: "Sydney", country: "Australia", currency: "AUS", emoji: "🏖"),
-        Holiday(title: "Tokyo", country: "Japan", currency: "JPY", emoji: "🗼")
+        Holiday(title: "Paris", country: "France", currency: .EUR, emoji: "🥖"),
+        Holiday(title: "Madrid", country: "Spain", currency: .EUR, emoji: "⚽️"),
+        Holiday(title: "New York", country: "USA", currency: .USD, emoji: "🗽"),
+        Holiday(title: "Los Angeles", country: "USA", currency: .USD, emoji: "🎥"),
+        Holiday(title: "Moscow", country: "Russia", currency: .RUB, emoji: "🐻"),
+        Holiday(title: "Sydney", country: "Australia", currency: .AUS, emoji: "🏖"),
+        Holiday(title: "Tokyo", country: "Japan", currency: .JPY, emoji: "🗼")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.rowHeight = 64.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +33,9 @@ class ViewController: UITableViewController {
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = holidays[indexPath.row]
-        let dequeued = tableView.dequeueReusableCell(withIdentifier: "HolidayCell", for: indexPath)
+        let dequeued = tableView.dequeueReusableCell(withIdentifier: "HolidayCell", for: indexPath) as! HolidayTableViewCell
         
-        dequeued.textLabel?.text = data.title
-        dequeued.detailTextLabel?.text = "\(data.emoji) - \(data.country) - \(data.currency)"
-        
+        dequeued.setUpCell(withHoliday: data)
         return dequeued
     }
     

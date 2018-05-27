@@ -11,13 +11,22 @@ import Foundation
 struct Holiday {
     var title: String
     var country: String
-    var currency: String
+    var currency: Currency
     var emoji: String
     
-    init(title: String, country: String, currency: String, emoji: String) {
+    init(title: String, country: String, currency: Currency, emoji: String) {
         self.title = title
         self.country = country
         self.currency = currency
         self.emoji = emoji
+    }
+    
+    enum Currency: String {
+        case GBP = "£"
+        case EUR = "€"
+        case USD = "$"
+        case JPY = "¥"
+        case AUS = "A$"
+        case RUB = "₽"
     }
 }
