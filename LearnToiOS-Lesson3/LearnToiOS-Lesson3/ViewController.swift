@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UITableViewController {
 
     var holidays = [
-        Holiday(title: "Paris", country: "France", currency: .EUR, emoji: "🥖"),
-        Holiday(title: "Madrid", country: "Spain", currency: .EUR, emoji: "⚽️"),
-        Holiday(title: "New York", country: "USA", currency: .USD, emoji: "🗽"),
-        Holiday(title: "Los Angeles", country: "USA", currency: .USD, emoji: "🎥"),
-        Holiday(title: "Moscow", country: "Russia", currency: .RUB, emoji: "🐻"),
-        Holiday(title: "Sydney", country: "Australia", currency: .AUS, emoji: "🏖"),
-        Holiday(title: "Tokyo", country: "Japan", currency: .JPY, emoji: "🗼")
+        Holiday(title: "Paris", country: "France", currency: .EUR, emoji: "🥖", continent: .europe),
+        Holiday(title: "Madrid", country: "Spain", currency: .EUR, emoji: "⚽️", continent: .europe),
+        Holiday(title: "New York", country: "USA", currency: .USD, emoji: "🗽", continent: .northAmerica),
+        Holiday(title: "Los Angeles", country: "USA", currency: .USD, emoji: "🎥", continent: .northAmerica),
+        Holiday(title: "Moscow", country: "Russia", currency: .RUB, emoji: "🐻", continent: .europe),
+        Holiday(title: "Sydney", country: "Australia", currency: .AUS, emoji: "🏖", continent: .australia),
+        Holiday(title: "Tokyo", country: "Japan", currency: .JPY, emoji: "🗼", continent: .asia),
     ]
 
     override func viewDidLoad() {

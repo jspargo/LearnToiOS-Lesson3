@@ -54,7 +54,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Fy2-A2-csW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                            <color key="textColor" red="0.33429327473375137" green="0.33760310913705582" blue="0.33760310913705582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

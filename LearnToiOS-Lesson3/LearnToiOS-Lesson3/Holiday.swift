@@ -13,12 +13,14 @@ struct Holiday {
     var country: String
     var currency: Currency
     var emoji: String
+    var continent: Continent
     
-    init(title: String, country: String, currency: Currency, emoji: String) {
+    init(title: String, country: String, currency: Currency, emoji: String, continent: Continent) {
         self.title = title
         self.country = country
         self.currency = currency
         self.emoji = emoji
+        self.continent = continent
     }
     
     enum Currency: String {
@@ -28,5 +30,12 @@ struct Holiday {
         case JPY = "¥"
         case AUS = "A$"
         case RUB = "₽"
+    }
+    
+    enum Continent {
+        case europe
+        case northAmerica
+        case australia
+        case asia
     }
 }
