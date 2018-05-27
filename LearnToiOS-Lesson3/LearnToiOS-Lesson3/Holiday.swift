@@ -32,10 +32,10 @@ struct Holiday {
         case RUB = "₽"
     }
     
-    enum Continent {
-        case europe
-        case northAmerica
-        case australia
-        case asia
+    enum Continent: String {
+        case europe = "Europe"
+        case northAmerica = "North America"
+        case australia = "Australia"
+        case asia = "Asia"
     }
 }
