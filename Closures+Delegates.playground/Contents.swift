@@ -9,15 +9,16 @@ class MyViewController : UIViewController {
         view.backgroundColor = .white
 
         let label = UILabel()
-        label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
-        label.text = "Hello World!"
+        label.frame = CGRect(x: 180, y: 200, width: 240, height: 20)
         label.textColor = .black
         
         view.addSubview(label)
         
-        someFunctionThatTakesAClosure(value: 2) { result in
+        someFunctionThatTakesAClosure(value: 2) { input in
             print("We could do some stuff here... probably with the View")
-            return result * 2
+            let output = input * 2
+            label.text = String(output)
+            return output
         }
         
         someFunctionThatTakesAClosure(value: 3) { $0 * 3 }
