@@ -25,6 +25,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Holiday Options"
         self.tableView.rowHeight = 64.0
         
         let europe = holidays.filter { return $0.continent == .europe }
